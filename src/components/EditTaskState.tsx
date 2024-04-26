@@ -26,6 +26,7 @@ interface EditTaskStateProps {
   };
 }
 
+// main
 function EditTaskState({ editTask, task }: EditTaskStateProps) {
   const [text, setText] = React.useState(task.text);
   const [priority, setPriority] = React.useState(task.priority);

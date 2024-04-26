@@ -4,13 +4,13 @@ import { faLayerGroup } from "@fortawesome/free-solid-svg-icons";
 import { faXmarkCircle } from "@fortawesome/free-solid-svg-icons";
 
 
+// struct
 interface TaskProps {
-  // struct
   sortPriority: (value: boolean) => void;
   sortDateCreated: (value: boolean) => void;
   sortDateComplete: (value: boolean) => void;
 }
-
+// main
 function Sort({ sortPriority, sortDateCreated, sortDateComplete }: TaskProps) {
   const [isOpen, setIsOpen] = React.useState(false);
   const [icon, setIcon] = React.useState(faLayerGroup);

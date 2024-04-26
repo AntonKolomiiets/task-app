@@ -15,6 +15,7 @@ interface TaskType {
   isEditing: boolean;
 }
 
+// function to create 
 function createId() {
   let count = Number(localStorage.getItem("idCounter")) || 0;
   return function () {
@@ -24,14 +25,15 @@ function createId() {
   };
 }
 
+// id generator
 const idGen = createId();
 
-const now = new Date();
+const now = new Date(); // date plug variable
 
 // main()
 function TaskContainer() {
   const [tasks, setTasks] = React.useState(() => {
-    const savedTasks = localStorage.getItem('task-app');
+    const savedTasks = localStorage.getItem('task-app'); // retrive data at init 
     return savedTasks ? JSON.parse(savedTasks) : [
     {
       id: 45,
@@ -59,6 +61,7 @@ function TaskContainer() {
   //   if (savedTaskContainer !== null) setTasks(JSON.parse(savedTaskContainer));
   // }, []);
 
+  //store
   React.useEffect(() => {
     window.localStorage.setItem("task-app", JSON.stringify(tasks));
   }, [tasks]);
@@ -156,6 +159,7 @@ function TaskContainer() {
     );
   }
 
+  // render
   return (
     <div className="TaskContainer">
       <div>

@@ -22,7 +22,7 @@ interface TaskProps {
   setComplete: (id: number) => void;
 }
 
-// Main funct start
+// main
 function Task({ task, editTask, deleteTask, setComplete }: TaskProps) {
   function manageChange() {
     setComplete(task.id);
@@ -48,7 +48,7 @@ function Task({ task, editTask, deleteTask, setComplete }: TaskProps) {
     }
   }
 
-  let days = returnDays();
+  let days = returnDays(); // days variable
 
   return (
     <div className="Task">
