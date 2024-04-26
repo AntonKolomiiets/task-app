@@ -1,38 +1,189 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+
+* {
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+body {
+  background: #3F5756;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  
 }
 
-.App-link {
-  color: #61dafb;
+.App {
+  text-align: right;
+  color: #926D33;
+  box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.25);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.TaskContainer {
+  background: #D5C2A2;
+  margin-top: 5rem;
+  padding: 2rem;
+  border-radius: 5px;
+}
+
+.TaskEditState {
+  margin-bottom: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #CB9323;
+  color: #333333;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  
+}
+.input-form {
+  outline: none;
+  background: none;
+  border: 1px solid #CB9323;
+  padding: 0.2rem 1rem;
+  margin-top: 0.7rem;
+  margin-bottom: 0.7rem;
+  /* width: 200px; */
+  color: #172639;
+  font-size: 1.7em;
+}
+
+textarea {
+  width: auto;
+  box-sizing: border-box;
+  background-color: #f8f8f8;
+  resize: none;
+}
+
+.select-priority {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 15%;
+  background: #CB9323;
+  padding: 0.2rem 1rem;
+}
+
+.Task {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #CB9323;
+  color: #926D33;
+  padding: 0.75rem 1rem;
+  border-radius: 14px;
+  margin-bottom: 1rem;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+  
+}
+
+.fa-trash {
+  margin-left: 0.75rem;
+}
+
+.incompleted {
+  color: #172639;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0.2rem 1rem;
+  
+}
+
+.completed {
+  color: #D5C2A2;
+  text-decoration: line-through;
+  cursor: pointer;
+  font-size: 2em;
+  padding: 0.2rem 1rem;
+  transition: 400ms;
+}
+
+.edit-icon,
+.delete-icon,
+.submit-icon {
+  cursor: pointer;
+  font-size: 1.3em;
+  
+  
+}
+.edit-icon:hover,
+.delete-icon:hover,
+.submit-icon:hover {
+  cursor: pointer;
+  font-size: 1.3em;
+  filter: brightness(70%);
+  
+}
+
+.plus-icon {
+  cursor: pointer;
+  font-size: 2em;
+  padding: 1rem;
+  
+}
+.plus-icon:hover {
+  cursor: pointer;
+  font-size: 2em;
+  padding: 1rem;
+  filter: brightness(70%);
+}
+.plus-icon:active {
+  transform: scale(0.75);
+}
+ 
+.iconsTray {
+  display: flex;
+  justify-content: right;
+  
+}
+
+.priority {
+  color: #D5C2A2;
+  justify-content: right;
+  font-size: 0.7em;
+  padding: 1rem;
+}
+.okluk {
+  font-size: 2.3em;
+  padding: 0.2em;
+}
+
+.fask {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.days {
+  /* font-size: 2.3em; */
+  padding-right: 0.6em;
+  color: #926D33
+
+}
+
+.dropdown-menu {
+  position: absolute;
+  right: 35%;
+  /* display: flex;
+  justify-content: flex-start; */
+  z-index: 999;
+  background-color: #ffffff55;
+  border-radius: 14px;
+  border: 1px solid #000;
+  padding: 10px;
+}
+
+.dropdown-menu li {
+  text-align: right;
+  display: flex;
+  justify-content: flex-start;
+  cursor: pointer;
+}
+
+.dropdown-menu li:hover {
+  background-color: #f0f0f055;
 }
