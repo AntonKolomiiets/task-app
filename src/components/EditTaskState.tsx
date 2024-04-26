@@ -1,5 +1,4 @@
 import React from "react";
-import Task from "./Task";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSquareCheck } from "@fortawesome/free-solid-svg-icons";
 
@@ -29,7 +28,6 @@ interface EditTaskStateProps {
 // main
 function EditTaskState({ editTask, task }: EditTaskStateProps) {
   const [text, setText] = React.useState(task.text);
-  const [priority, setPriority] = React.useState(task.priority);
   const [date, setDate] = React.useState<Date>(new Date(task.date_complete));
 
   const HandleSubmit = (event?: React.FormEvent<HTMLFormElement>) => {
@@ -41,7 +39,6 @@ function EditTaskState({ editTask, task }: EditTaskStateProps) {
   const selectPriority = (event: React.ChangeEvent<HTMLSelectElement>) => {
     event.preventDefault();
     const newPriority = Number(event.target.value);
-    setPriority(newPriority);
     editTask({ priority: newPriority }, task.id);
   };
 

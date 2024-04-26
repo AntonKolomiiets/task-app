@@ -43,7 +43,7 @@ function Sort({ sortPriority, sortDateCreated, sortDateComplete }: TaskProps) {
   };
 
   return (
-    <a>
+    <>
       <FontAwesomeIcon
         className="plus-icon"
         icon={icon}
@@ -58,7 +58,7 @@ function Sort({ sortPriority, sortDateCreated, sortDateComplete }: TaskProps) {
           </ul>
         </div>
       )}
-    </a>
+    </>
   );
 }
 
